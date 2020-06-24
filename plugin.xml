@@ -21,7 +21,7 @@
     </js-module>
 
     <!-- android -->
-    <platform name="android">
+    <platform name="android-disabled">
         <!-- Cordova >= 3.0.0 -->
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="SQLitePlugin">
@@ -84,7 +84,7 @@
     </platform>
 
     <!-- macOS (osx) -->
-    <platform name="osx">
+    <platform name="osx-disabled">
         <config-file target="config.xml" parent="/*">
             <feature name="SQLitePlugin">
                 <param name="ios-package" value="SQLitePlugin" />
@@ -117,7 +117,7 @@
     </platform>
 
     <!-- windows -->
-    <platform name="windows">
+    <platform name="windows-disabled">
         <js-module src="src/windows/sqlite-proxy.js" name="SQLiteProxy">
             <runs />
         </js-module>
