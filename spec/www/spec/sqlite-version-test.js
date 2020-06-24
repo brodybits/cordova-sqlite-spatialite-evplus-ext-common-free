@@ -89,7 +89,7 @@ var mytests = function() {
           });
         }, MYTIMEOUT);
 
-        it(suiteName + 'Check actual sqlite version', function(done) {
+        xit(suiteName + 'Check actual sqlite version', function(done) {
           if (isWebSql) pending('NOT DETERMINISTIC for (WebKit) Web SQL');
           if (!isWebSql && isAndroid && isImpl2) pending('NOT DETERMINISTIC for plugin on Android with androidDatabaseImplementation: 2');
 

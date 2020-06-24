@@ -1023,7 +1023,7 @@ var mytests = function() {
           }
         }, MYTIMEOUT);
 
-        it(suiteName + 'ALTER TABLE RENAME test', function(done) {
+        xit(suiteName + 'ALTER TABLE RENAME test', function(done) {
           var dbname = 'ALTER-TABLE-RENAME-test.db';
           var createdb = openDatabase(dbname, '1.0', 'Test', DEFAULT_SIZE);
 
