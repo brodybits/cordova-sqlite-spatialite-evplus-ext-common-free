@@ -10,6 +10,8 @@
 
 #import "sqlite3.h"
 
+#import "spatialite.h"
+
 #if 0
 #import "sqlite3_regexp.h"
 
@@ -196,6 +198,8 @@
 
                 sqlite3_base64_init(db);
 #endif
+
+                spatialite_init_ex(db, spatialite_alloc_connection(), 1);
 
                 // for SQLCipher version:
                 // NSString *dbkey = [options objectForKey:@"key"];

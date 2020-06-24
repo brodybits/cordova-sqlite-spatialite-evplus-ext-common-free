@@ -117,6 +117,32 @@ var mytests = function() {
           });
         }, MYTIMEOUT);
 
+        it(suiteName + 'Check spatialite version', function(done) {
+          if (isWebSql) pending('SKIP: NOT SUPPORTED for (WebKit) Web SQL');
+
+          var db = openDatabase('check-spatialite-version.db');
+          expect(db).toBeDefined();
+
+          db.transaction(function(tx) {
+            expect(tx).toBeDefined();
+
+            tx.executeSql('SELECT SPATIALITE_VERSION() AS myResult', [], function(tx_ignored, rs) {
+              expect(rs).toBeDefined();
+              expect(rs.rows).toBeDefined();
+              expect(rs.rows.length).toBe(1);
+              expect(rs.rows.item(0).myResult).toBe('4.1.1');
+
+              // Close (plugin only) & finish:
+              (isWebSql) ? done() : db.close(done, done);
+            });
+          }, function(error) {
+            // NOT EXPECTED:
+            expect(false).toBe(true);
+            expect(error.message).toBe('--');
+            done();
+          });
+        }, MYTIMEOUT);
+
       });
 
       describe(suiteName + 'sqlite encoding test(s)', function() {
