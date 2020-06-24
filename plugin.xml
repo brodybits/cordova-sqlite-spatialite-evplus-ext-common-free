@@ -56,6 +56,7 @@
         <source-file src="src/ios/CustomPSPDFThreadSafeMutableDictionary.m"
                 compiler-flags="-w" />
 
+        <!-- -
         <header-file src="node_modules/cordova-sqlite-evplus-ext-free-dependencies/sqlite3-regexp-cached/sqlite3_regexp.h" />
         <source-file src="node_modules/cordova-sqlite-evplus-ext-free-dependencies/sqlite3-regexp-cached/sqlite3_regexp.c" />
 
@@ -64,6 +65,7 @@
 
         <header-file src="node_modules/cordova-sqlite-evplus-ext-free-dependencies/libb64-encode/cencode.h" />
         <source-file src="node_modules/cordova-sqlite-evplus-ext-free-dependencies/libb64-encode/cencode.c" />
+        - -->
 
         <header-file src="node_modules/cordova-sqlite-evplus-ext-free-dependencies/sqlite3.h" />
         <source-file src="node_modules/cordova-sqlite-evplus-ext-free-dependencies/sqlite3.c"
@@ -87,6 +89,7 @@
         <source-file src="src/ios/CustomPSPDFThreadSafeMutableDictionary.m"
                 compiler-flags="-w" />
 
+        <!-- -
         <header-file src="node_modules/cordova-sqlite-evplus-ext-free-dependencies/sqlite3-regexp-cached/sqlite3_regexp.h" />
         <source-file src="node_modules/cordova-sqlite-evplus-ext-free-dependencies/sqlite3-regexp-cached/sqlite3_regexp.c" />
 
@@ -95,6 +98,7 @@
 
         <header-file src="node_modules/cordova-sqlite-evplus-ext-free-dependencies/libb64-encode/cencode.h" />
         <source-file src="node_modules/cordova-sqlite-evplus-ext-free-dependencies/libb64-encode/cencode.c" />
+        - -->
 
         <header-file src="node_modules/cordova-sqlite-evplus-ext-free-dependencies/sqlite3.h" />
         <source-file src="node_modules/cordova-sqlite-evplus-ext-free-dependencies/sqlite3.c"
