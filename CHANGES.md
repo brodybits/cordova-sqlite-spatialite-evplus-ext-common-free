@@ -1,5 +1,7 @@
 # Changes
 
+# cordova-sqlite-spatialite-evplus-ext-common-free 0.0.1-dev
+
 ## cordova-plugin-sqlite-evplus-ext-common-free 0.4.0
 
 ### cordova-sqlite-evcore-commoncore-free 0.2.0
