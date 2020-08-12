@@ -443,7 +443,8 @@ public class SQLitePlugin extends CordovaPlugin {
         DBRunner(final String dbname, JSONObject options, CallbackContext cbc, int dbid) {
             this.dbid = dbid;
             this.dbname = dbname;
-            this.oldImpl = options.has("androidOldDatabaseImplementation");
+            // this.oldImpl = options.has("androidOldDatabaseImplementation");
+            this.oldImpl = true;
             Log.v(SQLitePlugin.class.getSimpleName(), "Android db implementation: built-in android.database.sqlite package");
             this.bugWorkaround = this.oldImpl && options.has("androidBugWorkaround");
             if (this.bugWorkaround)
@@ -455,9 +456,9 @@ public class SQLitePlugin extends CordovaPlugin {
 
         public void run() {
             try {
-                if (!oldImpl)
-                    this.mydb = this.mydb1 = openDatabase(dbname, false, this.openCbc, this.oldImpl, this.dbid);
-                else
+                //* if (!oldImpl)
+                //*     this.mydb = this.mydb1 = openDatabase(dbname, false, this.openCbc, this.oldImpl, this.dbid);
+                //* else
                     this.mydb = openDatabase2(dbname, false, this.openCbc, this.oldImpl);
             } catch (Exception e) {
                 Log.e(SQLitePlugin.class.getSimpleName(), "unexpected error, stopping db thread", e);

@@ -21,7 +21,7 @@
     </js-module>
 
     <!-- android -->
-    <platform name="android-disabled">
+    <platform name="android">
         <!-- Cordova >= 3.0.0 -->
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="SQLitePlugin">
@@ -37,8 +37,11 @@
 
         <source-file src="src/android/io/sqlc/EVPlusNativeDriver.java" target-dir="src/io/sqlc"/>
 
-        <!-- Android-sqlite-evplus-ext-native-driver [native libs in jar]: -->
-        <lib-file src="node_modules/cordova-sqlite-evplus-ext-free-dependencies/evplus-native-driver.jar" />
+        <!-- use GitHub project from jitpack.io -->
+        <framework src="com.github.sevar83:android-spatialite:2.0.0" />
+
+        <!-- needed until this is integrated into cordova-android: -->
+        <framework src="src/android/jitpack-support.gradle" custom="true" type="gradleReference" />
     </platform>
 
     <!-- iOS -->

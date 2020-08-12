@@ -10,10 +10,14 @@ import android.database.Cursor;
 import android.database.CursorWindow;
 
 import android.database.sqlite.SQLiteConstraintException;
-import android.database.sqlite.SQLiteCursor;
-import android.database.sqlite.SQLiteDatabase;
+
+// XXX TBD GONE:
+// import android.database.sqlite.SQLiteCursor;
+
+import org.spatialite.database.SQLiteDatabase;
+import org.spatialite.database.SQLiteStatement;
+
 import android.database.sqlite.SQLiteException;
-import android.database.sqlite.SQLiteStatement;
 
 import android.util.Log;
 
